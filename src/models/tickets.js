@@ -1,7 +1,8 @@
-import mongoose, { Schema } from "mongoose";
+import connectDB from "@/lib/db";
+import mongoose from "mongoose";
+import { Schema } from "mongoose";
 
-mongoose.connect(process.env.DATABASE_URL);
-mongoose.Promise = global.Promise;
+connectDB();
 
 const ticketSchema = new Schema(
   {
@@ -18,5 +19,6 @@ const ticketSchema = new Schema(
   }
 );
 
-const Ticket = mongoose.models.Ticket || mongoose.model("Ticket", ticketSchema);
+const Ticket =
+  mongoose.models?.Ticket || mongoose.model("Ticket", ticketSchema);
 export default Ticket;
