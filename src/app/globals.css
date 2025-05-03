@@ -1,10 +1,22 @@
 @import "tailwindcss";
+/* @tailwind utilities;
 
-/* @layer components {
+@layer utilities {
   .icon {
     @apply text-[#f1f3f5] text-xl;
   }
   .btn {
     @apply hover: no-underline bg-[#0084d4] hover:bg-[#009fff] tracking-wider w-full text-center text-[#18222f] font-bold cursor-pointer uppercase px-4 py-2 rounded-md transition-colors block;
+  }
+  form {
+    @apply rounded-xl p-4;
+  }
+  label {
+    @apply mt-4;
+  }
+  input,
+  select,
+  textarea {
+    @apply m-1 rounded bg-gray-700 p-1;
   }
 } */
